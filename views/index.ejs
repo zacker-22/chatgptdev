@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>SQL Query</title>
+    <title>Customer Support</title>
 </head>
 <script src="js/bootstrap.min.js'"></script>
 
@@ -43,16 +43,14 @@
                     
 
                 </div>
-                <%=query%>
                     <br><br>
                     <table class="table">
                         <thead class="thead-default">
                         <tr>
-                            <th>{{result}}</th>
+                            <th> <%=result%> </th>
                             
                         </tr>
                     </table>
-                    {% endif %}
             </div>
             
             <div class="col"></div>
@@ -61,7 +59,9 @@
 </form>
 
 <script>
-    document.getElementById("sqlt").setAttribute("placeholder", "{{query}}");
+    document.getElementById("sqlt").setAttribute("placeholder", "<%=query%>");
+    console.log("<%=result%>");
+    console.log("<%=query%>");
 </script>
 
 
