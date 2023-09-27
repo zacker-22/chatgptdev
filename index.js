@@ -12,15 +12,6 @@ const server = http.createServer(app);
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'static')));
 
-function getResponse(query) {
-    var result = "blah";
-    
-
-
-    console.log(result + '\n\n');
-    return result.toString();
-}
-
 
 app.get('/', (req, res) => {
 
