@@ -10,7 +10,6 @@ import numpy as np
 from openai.embeddings_utils import distances_from_embeddings
 from ast import literal_eval
 
-
 def init_api():
      with open(".env") as env:
          for line in env:
@@ -23,9 +22,14 @@ init_api()
 
 class ChatGpt:
     def __init__(self):
+        self.state = "LOADING"
+        
+    
+    def load_data(self):
         self.df=pd.read_csv('processed/embeddings.csv', index_col=0)
         self.df['embeddings'] = self.df['embeddings'].apply(literal_eval).apply(np.array)
         self.df.head()
+        self.state = "READY"
 
 
     def create_context(
