@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support </title>
+</head>
+<body style=" background-color: aqua;">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <h1>Customer Support</h1>
+
+
+
+    <div id="flex" style="display: flex; flex-direction: column;">
+        <form action="/" method="post">
+            
+        <label for="language" style="align-self: center;">Select Language</label>
+        <select name="language" style="width: 300px; align-self: center;">
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+            <option value="German">German</option>
+            <option value="Italian">Italian</option>
+            <option value="Portuguese">Portuguese</option>
+            <option value="Russian">Russian</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Korean">Korean</option>
+        </select>
+        <br>
+        <br>
+        <div style="display: flex;flex-direction: row; align-self: center;align-items: center;">
+            <textarea  name="query" id="query" cols="50" rows="10" value="{{query}}"> </textarea>
+            <div style="width: 30px;"></div>
+            <textarea  name="result" id="result" cols="50" rows="10" value="{{result}}"> </textarea>
+        </div>
+        <br>
+        <br>
+        <button id="submit"  style="width: 100px; align-self: center;"  >Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("query").value = "{{query}}";
+        document.getElementById("result").value = "{{result}}";
+    </script>
+    
+</body>
+</html>
